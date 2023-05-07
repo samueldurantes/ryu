@@ -1,0 +1,7 @@
+let zero = @f -> @x -> x;
+let inc  = @n -> @f -> @x -> f (n f x);
+
+let four = (inc (inc (inc (inc zero))));
+let exp  = @m -> @n -> n m;
+
+(exp four four)
